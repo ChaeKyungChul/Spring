@@ -1,0 +1,17 @@
+package ch02.diproject.entity;
+
+public class MyLecExam extends MyLecExam implements Exam {
+
+	@Override
+	public int total() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public float avg() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

@@ -1,0 +1,10 @@
+package ch02.diproject.ui;
+
+public class ExamView {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

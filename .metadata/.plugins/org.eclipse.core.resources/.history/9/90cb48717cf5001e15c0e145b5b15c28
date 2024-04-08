@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	                    http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- Spring DI 작업 지시서 -->
+<!-- Exam exam = new MyLecExam()  패키지이름까지-->
+  <bean id="exam" class="ch01.diproject.entity.MyLecExam" />
+  
+    <!-- ExamView view = new ExamEngView(); -->
+    <bean id="view" class="ch01.diproject.ui.ExamEngView" >
+    
+    <!-- view.setExam(exam) -->
+     <property name="exam" ref="exam"></property>
+    
+    </bean>
+</beans>

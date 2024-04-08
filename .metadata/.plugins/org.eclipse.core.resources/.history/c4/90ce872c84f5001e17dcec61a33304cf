@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"  
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- Spring DI 작업 지시서 -->
+	<!-- Exam exam = new MyLecExam()  패키지이름까지-->
+    <bean id="exam" class="ch01.diproject.entity.MyLecExam" p:kor="50" > <!-- p방법 3번쨰 -->
+   
+   <!-- 값가져오는법 두개 생성자 , setter -->
+    <!-- setter를 이용한 DI 
+      <property name="kor">
+      <value>90</value>
+      </property>   
+        <property name="eng" value="84" />
+        <property name="math" value="50" />
+        <property name="his" value ="90" />
+        <property name="com" value ="60" />-->
+        
+        <!-- 생성자를 이용한 DI 
+        <constructor-arg index="0" value="10" />
+        <constructor-arg index="1" value="20" />
+        <constructor-arg index="2" value="30" />
+        <constructor-arg index="3" value="40" />
+        <constructor-arg index="4" value="50" />-->
+     </bean>
+  
+    <!-- ExamView view = new ExamEngView(); -->
+    <bean id="view" class="ch01.diproject.ui.ExamEngView" >
+    <!-- view.setExam(exam) -->
+     <property name="exam" ref="exam"/>
+    </bean>
+</beans>

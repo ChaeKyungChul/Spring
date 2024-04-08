@@ -1,0 +1,21 @@
+package ch01.diproject.entity;
+
+public class MyLecExam implements Exam {
+	
+	private int kor;
+	private int eng;
+	private int math;
+	private int his;
+	private int com;
+
+	@Override
+	public int total() {
+		return kor + eng + math + his + com;
+	}
+
+	@Override
+	public float avg() {
+		return total() / 5.0f;
+	}
+
+}

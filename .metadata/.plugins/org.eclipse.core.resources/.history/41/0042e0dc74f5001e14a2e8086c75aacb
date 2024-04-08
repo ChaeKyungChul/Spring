@@ -1,0 +1,14 @@
+package ch02.diproject;
+
+import ch02.diproject.entity.Exam;
+import ch02.diproject.entity.MyLecExam;
+
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Exam exam = new MyLecExam(;)
+	}
+
+}

@@ -1,0 +1,19 @@
+package ch01.diproject;
+
+import ch01.diproject.entity.MyLecExam;
+import ch01.diproject.ui.ExamEngView;
+import ch01.diproject.ui.ExamKorView;
+import ch01.diproject.ui.ExamView;
+import ch01.diproject.entity.Exam;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Exam exam = new MyLecExam();
+		ExamView view = new ExamEngView(exam); //DI
+		//ExamView view = new ExamKorView(exam); //DI
+		view.print();
+	}
+
+}

@@ -6,13 +6,37 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class BbsController {
-	  
- 	@RequestMapping("/list")
+   
+	@RequestMapping("/list")
 	public String list(Model model) {
+	
+		System.out.println("list() 실행됨");
 		
- 		System.out.println("list() 실행됨");
- 		
- 		return "list";
+		return "list";
 	}
-
+	
+	@RequestMapping("/contents")
+	public String contents(Model model) {
+	
+		System.out.println("contents() 실행됨");
+		
+		return "contents";
+	}
+	
+	@RequestMapping("/edit")
+	public String edit(Model model) {
+	
+		System.out.println("edit() 실행됨");
+		
+		return "edit";
+	}
+	
+	@RequestMapping("/write")
+	public String write(Model model) {
+	
+		System.out.println("write() 실행됨");
+		
+		return "write";
+	}
+	
 }

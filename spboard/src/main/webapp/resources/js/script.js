@@ -30,9 +30,10 @@ $(function(){
        height:300,
        lang: 'ko-KR'
    });
+
    //코멘트 버튼 보이기
    $(".comments .btn-box").click(function(){
-     $(this).find('.edel').toggle();
+      $(this).find('.edel').toggle();
    });
 });
 

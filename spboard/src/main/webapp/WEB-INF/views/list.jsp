@@ -1,62 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Board</title>
-  <link rel="stylesheet" href="res/css/style.css">
-  <script src="res/jquery.min.js"></script>
-  <script src="res/popper.min.js"></script>
-  <script src="res/bootstrap.min.js"></script>
-  <script src="res/script.js"></script>
-</head>
-<body>
-   <div class="container">
 
-    <!-- 헤더 -->
-      <header>
-         <a href="#" class="brand">MY BBS</a>
-         <nav>
-            <a href="#">회원보기</a>
-            <a href="#">추천글</a>
-            <a href="#">0000</a>
-         </nav>
-      </header>
-      <!-- / 헤더 -->
-      <div class="row">
-
-
-
-
-
-
-
-
-        <!-- ASIDE -->
-         <aside class="mt-3 p-4 bg-white">
-            <form name="loginForm" class="loginform" id="loginform" method="post">
-               <input type="text" class="form-control userid mb-4" id="userid"
-                      placeholder="아이디" name="userid" />
-               <input type="password" class="form-control userpass mb-3" id="userpass"
-                      placeholder="비밀번호" name="userpass" />      
-               <div class="text-right mb-3">
-                 <label> 아이디 기억 <input type="checkbox" name="rid" value="rid" id="rid"></label>
-               </div>         
-               <button type="submit" class="btn btn-primary btn-block">로그인</button>                     
-               <a href="join.html">회원가입</a>
-            </form>    
-         </aside>
-         <!--/ ASIDE-->
-
-
-
-
-
-         
-         <section>
-            <!-- listbox -->
             <div class="listbox">
                 <h1 class="text-center mb-5">게시판</h1>
                 <div class="d-flex justify-content-between py-4">
@@ -66,7 +10,7 @@
                     </div>
                     <div>
                         <a href="#" class="btn btn-primary">목록</a>
-                        <a href="write.html" class="btn btn-primary">글쓰기</a>                      
+                        <a href="write" class="btn btn-primary">글쓰기</a>                      
                     </div>
                 </div>
                 <table class="table table-hover">
@@ -90,7 +34,7 @@
                        <!-- loop --> 
                        <tr>
                            <td class="text-center">1</td>
-                           <td><a href="contents.html">제목입니다. 이곳에 제목 제목입니다. 이곳에 제목
+                           <td><a href="contents">제목입니다. 이곳에 제목 제목입니다. 이곳에 제목
                             제목입니다. 이곳에 제목
                             제목입니다. 이곳에 제목
                             제목입니다. 이곳에 제목
@@ -108,7 +52,7 @@
                        </tr>
                        <tr>
                         <td class="text-center">1</td>
-                        <td><a href="#">제목입니다. 이곳에 제목</a></td>
+                        <td><a href="contents">제목입니다. 이곳에 제목</a></td>
                         <td class="text-center">홍길동</td>
                         <td class="text-center">12</td>
                         <td class="text-center">2024.02.26</td>
@@ -161,7 +105,7 @@
                     </ul>
                     <div>
                         <a href="#" class="btn btn-primary">목록</a>
-                        <a href="write.html" class="btn btn-primary">글쓰기</a>                      
+                        <a href="write" class="btn btn-primary">글쓰기</a>                      
                     </div>
                </div>
                <form name="searchform" id="searchform" class="searchform">
@@ -187,15 +131,3 @@
                </form>
             </div>
             <!-- /listbox-->
-         </section>
-
-
-
-
-
-
-      </div>
-      <!-- 푸터 -->
-   </div>
-</body>
-</html>>

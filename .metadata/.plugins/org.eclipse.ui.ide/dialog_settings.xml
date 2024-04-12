@@ -109,6 +109,9 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\spworks\mysql"/>
+			<item value="C:\spworks\jspBoard"/>
+			<item value="C:\spworks\spboard"/>
 			<item value="C:\spworks\spbbs"/>
 			<item value="C:\spworks\ch01"/>
 		</list>

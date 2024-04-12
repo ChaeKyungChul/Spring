@@ -142,7 +142,7 @@ span.space{
     padding:40px;
 }
 .listbox{
-    border-bottom: 1px solid #ddd;
+    border-bottom:1px solid #ddd;
 }
 .listbox h1{
     font-size:25px;
@@ -191,31 +191,30 @@ span.space{
     width:20px;
 }
 .comment-btn{
-    width: 15%;
-    background: #434c53;
-    color: #fff;
+    width:15%;
+    background:#434c53;
+    color:#fff;
 }
 .comments .btn-box{
-    position: relative;
-    cursor: pointer;
+   position:relative;
+   cursor:pointer;
 }
 .edel{
     border:1px solid #434c53;
-    width: 80px;
-    padding: 10px 15px;
-    background  : #fff;
-    position : absolute;
+    width:80px;
+    padding:10px 15px;
+    background:#fff;
+    position:absolute;
     z-index:100;
-    right: -50px;
-    display: none;
+    right:-50px;
+    display:none;
 }
 .edel a{
-    display: block;
-    text-align:center;   
+    display:block;
+    text-align:center;
     margin-top:5px;
-    margin-bottom:5px;
+    margin-bottom:5px; 
 }
-
 
 /* 페이징 */
 .paging{

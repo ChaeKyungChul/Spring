@@ -5,4 +5,8 @@
     <fullyQualifiedTypeName name="ch02.diproject.ui.ExamKorView"/>
     <fullyQualifiedTypeName name="ch02.diproject.ui.Exammath"/>
     <fullyQualifiedTypeName name="ch01.diproject.entity.Exam"/>
+    <fullyQualifiedTypeName name="com.google.protobuf.Timestamp"/>
+    <fullyQualifiedTypeName name="java.sql.Timestamp"/>
+    <fullyQualifiedTypeName name="javax.naming.Context"/>
+    <fullyQualifiedTypeName name="javax.naming.InitialContext"/>
 </qualifiedTypeNameHistroy>

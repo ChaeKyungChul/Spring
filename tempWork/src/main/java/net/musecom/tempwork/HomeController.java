@@ -6,6 +6,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +16,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 
 import net.musecom.tempwork.dao.StudentDao;
 import net.musecom.tempwork.model.StudentDto;
@@ -63,11 +64,31 @@ public class HomeController {
       return "home";
    }
    
+   @RequestMapping("content")
+   public String content(HttpServletRequest request, Model model) {
+	   System.out.println("content()실행됨");
+	   int id = Integer.parseInt(request.getParameter("id"));
+	   StudentDto dto = studentDao.findStudentById(id);
+	   model.addAttribute("dto",dto);
+	   return "content";
+   }
+   
+   
    @RequestMapping("insert")
    public String insert() {
       System.out.println("insert()실행");
       return "insert";
    }
+   
+   /*
+    * 
+    * insertok(HttpServletrequest request, model model){
+    *   String name = request.getParameter("name");
+    *   String email = request.getParameter("email");
+    *   ....
+    * }
+    * 
+    * */
    
    @RequestMapping(value="insertok", method=RequestMethod.POST)// 내용을 치면ㅇ ㅕ기로감
    public String insertok(
@@ -92,5 +113,50 @@ public class HomeController {
        
       return "redirect:list";
    }
+   @RequestMapping("update")
+   public String update(HttpServletRequest request, Model model) {
+	   System.out.println("update()실행됨");
+	   int id = Integer.parseInt(request.getParameter("id"));
+	   StudentDto dto = studentDao.findStudentById(id);
+	   model.addAttribute("dto",dto);
+	   return "update";
+   }
    
-}
+	@RequestMapping(value="updateok", method=RequestMethod.POST)
+	 public String updateok(
+	         @RequestParam("name") String name, 
+	         @RequestParam("email") String email,   //내용담음
+	         @RequestParam("course") String course,
+	         @RequestParam("id") String id,
+	         Model model) {
+			 
+		StudentDto dto = new StudentDto();
+		dto.setStu_id(Integer.parseInt(id));
+		dto.setStu_name(name);
+		dto.setStu_email(email);
+		dto.setStu_course(course);
+		int rs = studentDao.update(dto);
+	     if(rs > 0) {
+		          model.addAttribute("msg", "수정햇씁니다.");
+		       }else {
+		          model.addAttribute("msg", "수정에 실패했슴니다.");
+		       }
+		
+		return "redirect:list";
+	}
+	
+   @RequestMapping("delete")
+   public String delete(HttpServletRequest request, Model model) {
+	   System.out.println("delete()완료");
+	   int id = Integer.parseInt(request.getParameter("id"));
+	   int rs = studentDao.delete(id);
+	    if(rs > 0) {
+	          model.addAttribute("msg", "삭제했습니다.");
+	       }else {
+	          model.addAttribute("msg", "삭제에 실패했습니다..");
+	       }
+	
+	   return "redirect:list";
+   }
+ }
+

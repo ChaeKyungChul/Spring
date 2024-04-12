@@ -43,14 +43,37 @@ public class StudentDaoImpl implements StudentDao {
 
    @Override
    public int update(StudentDto dto) {
-      // TODO Auto-generated method stub
-      return 0;
+	   
+     String sql ="update student set stu_name=?, stu_email=? , stu_course =? where stu_id = ?";
+     try {
+    	 int rs = template.update(sql, new Object[] {
+    			 dto.getStu_name(),
+    			 dto.getStu_email(),
+    			 dto.getStu_course(),
+    			 dto.getStu_id()
+    	 });
+    	 return rs;
+    	 
+     }catch(Exception e) {
+    	 e.printStackTrace();
+    	 return 0;
+     }
+     
+      
    }
 
    @Override
    public int delete(int studentId) {
-      // TODO Auto-generated method stub
-      return 0;
+    
+	  String sql = "delete from student where stu_id=?";
+	  try {
+		  int rs = template.update(sql, new Object[] {studentId});
+		  return rs;
+				  
+	  }catch(Exception e) {
+		  return 0;
+	  }	   
+    
    }
 
    @Override
@@ -76,11 +99,14 @@ public class StudentDaoImpl implements StudentDao {
    }
 
    @Override
-   public List<StudentDto> findStudentById(int studentId) {
+   public StudentDto findStudentById(int studentId) {
    
       String sql = "select * from student where stu_id = ?";
-      
-      List<StudentDto> stView = template.query(sql, new RowMapper<StudentDto>() {
+      try {
+      StudentDto stView = template.queryForObject(
+    		     sql, 
+    		     new Object[]{studentId} , 
+    		     new RowMapper<StudentDto>() { //3가지 받음
 
          @Override
          public StudentDto mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -90,13 +116,17 @@ public class StudentDaoImpl implements StudentDao {
                 dto.setStu_name(rs.getString("stu_name"));
                 dto.setStu_email(rs.getString("stu_email"));
                 dto.setStu_course(rs.getString("stu_course"));
-                            
+                            //dto에 담음
             return dto;
          }
          
       });
+          return stView;
+      }catch(Exception e) {
+    	  return null;
+      }
       
-      return stView;
+     
    }
 
 }

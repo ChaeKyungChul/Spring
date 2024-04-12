@@ -14,5 +14,5 @@ public interface StudentDao {
 	
 	public List<StudentDto> read();
 	
-	public List<StudentDto> findStudentById(int studentId);
+	public StudentDto findStudentById(int studentId);
 }

@@ -1,14 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>   
          <!-- listbox -->
+                 
+            
             <div class="listbox">
-               <h3 class="mt-5"><i class="ri-arrow-right-double-line"></i> 제목</h3> 
+                 
+               <h3 class="mt-5"><i class="ri-arrow-right-double-line" ></i> aa </h3>
                <div class="mt-2 mb-5 pt-2 border-top text-right">
                   <span class="mr-4"><label class="font-italic">hit:</label> 0</span>
                   <span class="mr-4 font-weight-bold">홍길동</span>
                   <span class="mr-2">2023.03.03 </span>
+           
                </div>
+                 
                <!-- 
                <div class="mt-2 pt-2 border-top file-box">
                   <span>

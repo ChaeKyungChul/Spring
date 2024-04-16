@@ -8,10 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><tiles:getAsString name="title"/></title>
   <link rel="stylesheet" href="res/css/style.css">
-  <script src="res/css/summernote-bs4.css"></script>
-  <script src="res/js/write.js"></script>
-    <script src="res/js/summernote-bs4.js"></script>
-  <script src="res/js/lang/summernote-ko-KR.min.js"></script>
   <script src="res/js/jquery.min.js"></script>
   <script src="res/js/popper.min.js"></script>
   <script src="res/js/bootstrap.min.js"></script>

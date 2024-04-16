@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.musecom.spboard.dao.SpBoardMapper">
+
+  <sql id="bbsColumn">
+     refid,
+     depth,
+     renum,
+     title,
+     content,
+     writer,
+     pass,
+     userid,
+     hit,
+     chit,
+     wdate,
+     imnum
+  </sql>
+
+  <insert id="insert" parameterType="spBoardDto" useGeneratedKeys="true" keyProperty="id">
+     INSERT INTO jboard(<include refid="bbsColumn"/>) values (
+     <!-- 조건 구별 -->
+     <choose>
+        <!-- 답글일 경우 -->
+        <when test="refid != 0">
+          #{refid}, 
+          #{depth},
+          #{renum},       
+        </when>
+        <!-- 새글일 경우 -->
+        <otherwise>
+          last_insertId(),
+          0,
+          0,
+        </otherwise>
+     </choose>
+       #{title},
+       #{content},
+       #{writer},
+       #{pass},
+       #{userid},
+       0,
+       0,
+       now(),
+       unix_timestamp()
+     )
+  </insert>
+  
+  <update id="update" parameterType="spBoardDto">
+     UPDATE jboard 
+     SET
+        title = #{title},
+        content = #{content},
+        writer = #{writer},
+        pass = #{pass}
+     WHERE
+        id=#{id}   
+  </update>
+  
+  <delete id="delete" parameterType="int">
+     DELETE FROM jboard
+     WHERE
+       id=#{id}  
+  </delete>
+  
+  <select id="selectTotalCount" resultType="int">
+     SELECT
+       COUNT(*)
+     FROM
+       jboard
+  </select>
+
+  <select id="selectList" resultType="spBoardDto">
+    SELECT * 
+    FROM 
+       jboard
+    ORDER BY refid DESC, 
+    renum ASC 
+    LIMIT #{limitPage}, #{viewlist}  
+  </select>  
+
+  <select id="selectDetail" resultType="spBoardDto" parameterType="int">
+     SELECT 
+       *
+     FROM
+       jboard
+     WHERE
+       id= #{id}
+  </select>
+
+</mapper>

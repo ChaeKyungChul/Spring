@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <link rel="stylesheet" href="res/css/style.css">
+    
          <!-- listbox -->
             <div class="listbox">
                <h3 class="mt-5"><i class="ri-arrow-right-double-line"></i> 제목</h3> 
@@ -23,9 +23,9 @@
                
                <div class="my-5 pt-5 text-right">
                   <a href="./?cpg=" class="btn btn-primary mr-3">목록</a>
-                  <a href="rewrite.jsp?id=&refid=&depth=&renum=&cpg=" class="btn btn-primary">답글쓰기</a>
-                  <a href="pass.jsp?id=&mode=edit" class="btn btn-primary">수정</a>
-                  <a href="pass.jsp?id=&mode=del" class="btn btn-danger">삭제</a>                      
+                  <a href="rewrite?id=&refid=&depth=&renum=&cpg=" class="btn btn-primary">답글쓰기</a>
+                  <a href="pass?id=&mode=edit" class="btn btn-primary">수정</a>
+                  <a href="pass?id=&mode=del" class="btn btn-danger">삭제</a>                      
                </div>
                
-         
+            </div>

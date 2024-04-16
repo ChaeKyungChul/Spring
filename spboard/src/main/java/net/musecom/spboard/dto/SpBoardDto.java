@@ -19,4 +19,4 @@ public class SpBoardDto {
    private int chit;
    private Timestamp wdate;
    private long imnum;
-   }
+}

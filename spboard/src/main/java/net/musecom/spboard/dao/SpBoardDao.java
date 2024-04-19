@@ -18,7 +18,7 @@ public class SpBoardDao implements SpBoardMapper {
    @Override
    public int insert(SpBoardDto dto) {
 
-      return 0;
+      return session.insert("insert", dto);
    }
 
    @Override
@@ -48,5 +48,15 @@ public class SpBoardDao implements SpBoardMapper {
    public List<SpBoardDto> selectList(Map<String, Object> params) {
       return session.selectList("selectList", params);
    }
+   
+   @Override
+   public void increaseHit(int selectId) {
+	   session.update("increaseHit", selectId);
+   }
 
+    @Override
+    	public void updateRefId(int id) {
+    	session.update("updateRefid", id);
+  		
+    	}
 }

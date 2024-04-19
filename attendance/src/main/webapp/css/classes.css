@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.min.css');
+@import url('animate.min.css');
+@import url('bootstrap.min.css');
+
+body{
+    margin-top: 100px;
+    font-family: "Noto Sans KR", sans-serif;
+    line-height: 1.6;
+    background-color: #e4e2e2;
+  }
+  
+  .container{
+    width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+    position: relative;
+    background-color: #fff;
+  }
+  ul{
+    list-style-type: none;
+  }
+  ul.tabs{
+    margin: 0px;
+    padding-left: 100px;
+    list-style: none;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  ul.tabs li{
+    background: none;
+    color: #222;
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  ul.tabs li.current{
+    background: #ededed;
+    color: #222;
+  }
+  
+  .tab-content{
+    display: none;
+    background: #ededed;
+    padding: 15px;
+  }
+  
+  .tab-content.current{
+    display: inherit;
+  }
+  button.sub{
+   position: absolute;
+   left: 40%;
+  }

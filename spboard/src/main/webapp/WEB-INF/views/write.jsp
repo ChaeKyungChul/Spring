@@ -13,7 +13,7 @@
                      </div>
                      <div class="col-6 row form-group">
                         <label class="form-label">비밀번호</label>
-                        <input type="password" name="password" id="password" class="form-control" placeholder="비밀번호" />
+                        <input type="password" name="pass" id="password" class="form-control" placeholder="비밀번호" />
                      </div>
                   </div>
                   <div class="col-12 row form-group">
@@ -21,8 +21,7 @@
                      <input type="text" name="title" id="title" class="form-control col-10" placeholder="제목" />
                   </div>
                   <div class="col-12">
-                     <textarea name="contents" id="contents" class="form-control">
-                     </textarea>
+                     <textarea name="content" id="contents" class="form-control"></textarea>
                   </div>
                   <!-- /게스트일때 적용-->
                   <div class="col-12 text-center my-5">

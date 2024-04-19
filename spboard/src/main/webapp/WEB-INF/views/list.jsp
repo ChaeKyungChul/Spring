@@ -48,7 +48,7 @@
                        
                        <tr>
                            <td class="text-center">${list.id }</td>
-                           <td>${styleDepth} <a href="contents?id=${list.id }">${list.title }</a>
+                           <td>${styleDepth} <a href="contents?id=${list.id }&cpg=${cpg}">${list.title }</a>
                             <span>${commentHit }</span>
                            </td>
                             
@@ -61,10 +61,7 @@
                     </tbody>
                 </table>
                 <div class="d-flex justify-content-between py-4">
-                    <div>
-                        <a href="#" class="btn btn-primary">최신글순</a>
-                        <a href="#" class="btn btn-primary">인기글순</a>
-                    </div>
+                
                     
                     <ul class="paging">
                         <li>

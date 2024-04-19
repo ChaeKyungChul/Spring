@@ -19,21 +19,22 @@
      imnum
   </sql>
   
-  <insert id="insert" parameterType="spBoardDto" useGeneratedKeys="true" keyProperty="id">
+  
+   <insert id="insert" parameterType="spBoardDto" useGeneratedKeys="true" keyProperty="id">
      INSERT INTO jboard(<include refid="bbsColumn"/>) values (
-     <!-- 조건 구별 -->
+    <!--  조건 구별 -->
      <choose>
-        <!-- 답글일 경우 -->
-        <when test="refid != 0">
-          #{refid}, 
-          #{depth},
-          #{renum},       
-        </when>
-        <!-- 새글일 경우 -->
-        <otherwise>
+       <!--   답글일 경우-->
+         <when test="refid == 0">
           last_insertId(),
           0,
           0,
+        </when>  
+       <!--   새글일 경우-->
+        <otherwise>
+           #{refid}, 
+          #{depth},
+          #{renum}, 
         </otherwise>
      </choose>
        #{title},
@@ -46,7 +47,11 @@
        now(),
        unix_timestamp()
      )
-  </insert>
+  </insert> 
+  
+  <update id="updateRefId" parameterType="int">
+     UPDATE jboard SET refid = #{id} WHERE id=#{id}
+  </update>
   <update id="update" parameterType="spBoardDto">
      UPDATE jboard 
      SET
@@ -55,13 +60,13 @@
         writer = #{writer},
         pass = #{pass}
      WHERE
-        id=#{id}   
+        id=#{selectId}   
   </update>
   
   <delete id="delete" parameterType="int">
      DELETE FROM jboard
      WHERE
-       id=#{id}  
+       id=#{selectId}  
   </delete>
   
   <select id="selectTotalCount" resultType="int">
@@ -101,7 +106,13 @@
      FROM
        jboard
      WHERE
-       id= #{id}
+       id= #{selectId}
   </select>
+  
+  <update id ="increaseHit" parameterType="int">
+     UPDATE jboard 
+     SET hit = hit + 1
+	 WHERE id = #{selectId}
+  </update>
 
 </mapper>

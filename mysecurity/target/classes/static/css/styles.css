@@ -10970,3 +10970,41 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+body#login{
+	padding-left:0;
+}
+#login .card {
+    border:  none;
+    height:  320px;
+}
+#login .forms-inputs {
+    position:  relative;
+}
+#login .forms-inputs span {
+    position:  absolute;
+    top: -18px;
+    left:  10px;
+    background-color:  #fff;
+    padding:  5px 10px;
+    font-size:  15px;
+}
+#login .forms-inputs input {
+    height:  50px;
+    width:100%;
+    border:  2px solid #eee;
+}
+#login .forms-inputs input:focus {
+    box-shadow:  none;
+    outline:  none;
+    border:  2px solid #000;
+}
+#login .btn {
+    height:  50px;
+}
+#login .success-data {
+    display:  flex;
+    flex-direction:  column;
+}
+#login .bxs-badge-check {
+    font-size:  90px;
+}

@@ -1,34 +1,35 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
  
- <%@ page import="java.util.*, 
+ 
+<%@ page import="java.util.*, 
                  attendance.dto.*,
                  dao.*,
                  java.sql.*" %>  
+
+<%
+		    HttpSession sess = request.getSession(true);
+		    DBConnect db = new DBConnect();
+		    Connection conn = db.getConnection(); 
+		    MemberDao dao = new MemberDao(conn); 
+		   
+		    String code = "1";
+		    ArrayList<DBto> list = dao.gradeDB(code);
+		    DBto dto = new DBto();
+		  
+		    if (!list.isEmpty()) {
+		        dto = list.get(0); // 첫 번째 항목을 사용하여 초기화
+		    }
+		   
+		    String name = dto.getName();
+		    String subject = dto.getSubject();
+		    Double score = dto.getScore();
+		   
+		    System.out.println(name + "|" + subject + "|" + score);
+		    		    
+%>
  
-   <%
-  
-	   HttpSession sess = request.getSession(true);
-	   DBConnect db = new DBConnect();
-	   Connection conn = db.getConnection(); 
-	   MemberDao dao = new MemberDao(conn); 
-	   String code = "1";
-	   ArrayList<DBto> list = dao.gradeDB(code);
-	   DBto dto = new DBto();
-	   
-	   String name = null;
-	   String subject = null;
-	   Double score = null;
-	   
-	
-	     name = dto.getName();
-	     subject = dto.getSubject();
-	     score = dto.getScore();
-	
-	     System.out.println(name+"|"+subject+"|"+score);
-   %>
- 
-   
+     <p class="text-right"><%=dto.getName() %>님<a href="#"> 로그아웃</a></p>
 
 
 <!DOCTYPE html>
@@ -76,7 +77,7 @@
     <input type="text" id="searchInput" placeholder="학생 이름으로 검색">
     <button onclick="searchGrade()">검색</button><br><br>
 
-    <table id="gradeTable">
+    <table id="gradeTable" border='1'>
         <tr>
             <th>학생 번호</th>
             <th>이름</th>
@@ -86,30 +87,22 @@
             <th>삭제</th> 
           
         </tr>
-     
-        <!--   /*for(int i=0; i<list.size(); i++){
-       dto = list.get(i);   
-       name = dto.getName();
-	   }*/ -->
-    
-         <tr>
-           <th><%=dto.getId() %> </th>
-           <th><%=dto.getName() %> </th>
-           <th><%=dto.getSubject() %>  </th>
-           <th><%=dto.getScore() %> </th>
-           <th> </th>
-           <th> </th>
-         </tr>   
-         <tr>
-           <th><%=dto.getId() %> </th>
-           <th><%=dto.getName() %> </th>
-           <th><%=dto.getSubject() %>  </th>
-           <th><%=dto.getScore() %> </th>
-           <th> </th>
-           <th> </th>
-         </tr>
-       
-       
+			  <%
+			for(int i = 0; i < list.size(); i++) {	
+			      dto = list.get(i);   
+			%>
+			<tr>
+			    <td><%=dto.getId() %> </td>
+			    <td><%=dto.getName() %> </td>
+			    <td><%=dto.getSubject() %>  </td>
+			    <td><%=dto.getScore() %> </td>
+			    <td> </td>
+			    <td> </td>
+			</tr>		
+			<%
+			}
+			%>
+		       
       
       
         <!-- 여기에 성적 정보를 표시할 행들을 추가하세요 -->

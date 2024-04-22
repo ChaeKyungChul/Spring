@@ -14,7 +14,7 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
 	private PasswordEncoder bcryptPasswordEncoder;
 	
 	@Override
-	protected void configure(AuthenticationManagerBuilder auth) throws Exception { //authÀ»¹Ş¾Æ¼­ 
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception { //authì„ë°›ì•„ì„œ 
 	
 		auth
 		    .inMemoryAuthentication()
@@ -22,7 +22,7 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
 		    .password("$2a$10$o6ysXkhAlnwavhUVREs3sOeGGviamBCuRm5wEBlmGT8nNLlk.NN3W")
 		    .roles("ADMIN");
 		
-	       	System.out.println("my password id crypt " + bcryptPasswordEncoder.encode("1234")); //bcrypt ¾Ë°í¸®Áò¾ÏÈ£È­
+	       	System.out.println("my password id crypt " + bcryptPasswordEncoder.encode("1234")); //bcrypt ì•Œê³ ë¦¬ì¦˜ì•”í˜¸í™”
 		    /*
 		    .and()
 		    .withUser("wein")
@@ -34,20 +34,28 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		
 		http
-		    .authorizeRequests() //½ÂÀÎ¿äÃ» . anyRequest() ¸ğµç¿äÃ»
+		    .authorizeRequests() //ìŠ¹ì¸ìš”ì²­ . anyRequest() ëª¨ë“ ìš”ì²­
 		    /*
-		    .antMatchers("/").permitAll() // ÁøÀÔÆäÀÌÁö´Â °ø°³
+		    .antMatchers("/").permitAll() // ì§„ì…í˜ì´ì§€ëŠ” ê³µê°œ
 		    .antMatchers("/hello").permitAll()
 		    .antMatchers("/bye").permitAll()
 		    */
-		    .antMatchers("/member/**").authenticated() //member Æú´õ´Â ÀÎÁõ
-		    .anyRequest().permitAll()
-		    .and()
-		    .formLogin()
-		    .and()
-		    .logout();
-	}
-     
-	
-
+		    .antMatchers("/member/**").authenticated()  //member  í´ë”ëŠ” ì¸ì¦	
+		     .anyRequest().permitAll()
+		     .and()
+		     .formLogin().loginPage("/clogin").loginProcessingUrl("/member/gallery")
+		     .and() 
+		     .httpBasic()
+		     .and()
+		     .logout(); 
+		//	.logoutUrl("/member/bye") //ë¡œê·¸ì•„ì›ƒì„ ìˆ˜í–‰í•  URLì„ ì§€ì •í• ë•Œ ì‚¬ìš©
+		  //.logoutSuccessUrl("/bye?logout") //ë¡œê·¸ì•„ì›ƒ ì„±ê³µ í•˜ë©´ ë¦¬ë‹¤ì´ë ‰ì…˜ë˜ëŠ” URL
+		 // .deleteCookies("JSESSIONID")  //ì‚­ì œí•  ì¿ í‚¤ì´ë¦„
+		 // .invalidateHttpSession(true); // ê¸°ì¡´ ì„¸ì…˜ ë¬´íš¨í™”
+			
+		
+		
+		       
+	       
+	}  
 }

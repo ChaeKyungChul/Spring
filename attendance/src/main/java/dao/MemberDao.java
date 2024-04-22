@@ -102,23 +102,18 @@ public class MemberDao {
 	}
 	
 	
+	//점수
 	public ArrayList<DBto> gradeDB(String code) {
-	    String sql = "select * from student where id=? and name =?";
+	    String sql = "select * from grade where id=?";
 	    ArrayList<DBto> list = new ArrayList<>();
-	   
+	    
 	    try {
 	        pstmt = conn.prepareStatement(sql);     
 	        pstmt.setString(1, code);       
 	        rs = pstmt.executeQuery(); 
 	         
-	        while(rs.next()) {
-	                      
-	          //  int Id = rs.getInt("id");
-	          //  String Name = rs.getString("name");
-	          //  String subject = rs.getString("subject");
-	          //  double score = rs.getDouble("score");
-
-	            DBto dto = new DBto(); // while 루프 내에서 객체 생성         
+	        while(rs.next()) {                
+	        	DBto dto = new DBto();  // while 루프 내에서 객체 생성         
 	            dto.setId(rs.getInt("id"));
 	            dto.setName(rs.getString("name"));
 	            dto.setSubject(rs.getString("subject"));

@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/member")
 public class MemberController {
-	
-	//로그인페이지 
+
+	//로그인페이지
 	@GetMapping("/home")
 	public String home() {
 		System.out.println("member/home 실행");

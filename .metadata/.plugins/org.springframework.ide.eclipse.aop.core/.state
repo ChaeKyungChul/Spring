@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="mysecurity"/>
 <aop-project name="sp"/>
+<aop-project name="mysecurity"/>
 <aop-project name="spboard"/>
 <aop-project name="tempWork"/>
 <aop-project name="ch01"/>

@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="net.musecom.sec">
+	<logger name="net.musecom.mysec">
 		<level value="info" />
 	</logger>
 	

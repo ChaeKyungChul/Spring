@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<H1>회원공간입니다.</H1>
-
+ <h1>회원 전용 공간입니다.</h1>
+ <a href="./clogout">로그아웃 하기</a>
 </body>
 </html>

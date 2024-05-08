@@ -18,5 +18,5 @@ public class SpBoardDto {
    private int hit;
    private int chit;
    private Timestamp wdate;
-   private long imnum;
+   private String imnum;
 }

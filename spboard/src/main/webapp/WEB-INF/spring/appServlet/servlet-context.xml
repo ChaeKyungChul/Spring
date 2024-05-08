@@ -46,7 +46,7 @@
 	  <beans:property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
 	  <beans:property name="url" value="jdbc:mysql://localhost:3306/javaboard?useUnicode=true&amp;characterEncoding=utf-8" />
 	  <beans:property name="username" value="root" />
-	  <beans:property name="password" value="dufrhdgkwk10@" />
+	  <beans:property name="password" value="good6617" />
 	</beans:bean>
 	
 	<!-- SQL 세션 팩토리 설정 -->
@@ -60,6 +60,12 @@
     <beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
         <beans:constructor-arg index="0" ref="sqlSessionFactory" />
     </beans:bean>
+    
+    <!-- 업로드를 위한 multipart 설정 -->
+    <beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+       <!-- 한 파일의 최대 크기 : 최대크기 약 20Mb-->
+       <beans:property name="maxUploadSize" value="20971520" />
+    </beans:bean>    
     
     <!--  트랜젝션 메니저 -->
     <beans:bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">

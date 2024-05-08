@@ -61,7 +61,8 @@
                     </tbody>
                 </table>
                 <div class="d-flex justify-content-between py-4">
-                
+                    <div>
+                    </div>
                     
                     <ul class="paging">
                         <li>
@@ -105,8 +106,8 @@
                                 <a class="dropdown-item" href="content">내용검색</a>
                             </div>
                         </div>
-                        <input type="hidden" name="searchname" id="searchname" value="title" />
-                        <input type="search" name="searchvalue" class="form-control" placeholder="검색">
+                       <input type="hidden" name="searchname" id="searchname" value="title" />
+                       <input type="search" name="searchvalue" class="form-control" placeholder="검색">
                        <div class="input-group-append">
                           <button class="btn btn-primary"><i class="ri-search-line"></i></button>
                        </div>

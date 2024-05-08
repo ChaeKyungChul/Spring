@@ -12,7 +12,7 @@
 	
 	<!-- Application Loggers -->
 	<logger name="net.musecom.spboard">
-		<level value="info" />
+		<level value="debug" />
 	</logger>
 	
 	<!-- 3rdparty Loggers -->
@@ -25,16 +25,16 @@
 	</logger>
 	
 	<logger name="org.springframework.context">
-		<level value="info" />
+		<level value="debug" />
 	</logger>
 
 	<logger name="org.springframework.web">
 		<level value="info" />
 	</logger>
-	
-	<logger name="net.musecom.dao.SpBoardMapper">
-	   <level value="debug" />
-	</logger>
+
+    <logger name="net.musecom.dao.SpBoardMapper">
+       <level value="debug" />
+    </logger>
 
 	<!-- Root Logger -->
 	<root>

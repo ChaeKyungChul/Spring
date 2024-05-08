@@ -18,21 +18,19 @@
      wdate,
      imnum
   </sql>
-  
-  
-   <insert id="insert" parameterType="spBoardDto" useGeneratedKeys="true" keyProperty="id">
+
+
+  <insert id="insert" parameterType="spBoardDto" useGeneratedKeys="true" keyProperty="id">
      INSERT INTO jboard(<include refid="bbsColumn"/>) values (
-    <!--  조건 구별 -->
+
      <choose>
-       <!--   답글일 경우-->
-         <when test="refid == 0">
-          last_insertId(),
+        <when test="refid == 0">
           0,
           0,
-        </when>  
-       <!--   새글일 경우-->
+          1,              
+        </when>
         <otherwise>
-           #{refid}, 
+          #{refid}, 
           #{depth},
           #{renum}, 
         </otherwise>
@@ -45,13 +43,18 @@
        0,
        0,
        now(),
-       unix_timestamp()
+       #{imnum}
      )
-  </insert> 
-  
+  </insert>
+
   <update id="updateRefId" parameterType="int">
      UPDATE jboard SET refid = #{id} WHERE id=#{id}
   </update>
+
+  <update id="updateRenum" parameterType="hashMap">
+     UPDATE jboard SET renum = renum + 1 WHERE renum >= #{renum} and refid = #{refid}
+  </update>
+
   <update id="update" parameterType="spBoardDto">
      UPDATE jboard 
      SET
@@ -60,7 +63,7 @@
         writer = #{writer},
         pass = #{pass}
      WHERE
-        id=#{selectId}   
+        id=#{id}   
   </update>
   
   <delete id="delete" parameterType="int">
@@ -76,43 +79,41 @@
        jboard
   </select>
 
-  <select id="selectList" resultType="spBoardDto">
+  <select id="selectList" resultType="spBoardDto" parameterType="hashMap">
     SELECT * 
     FROM 
        jboard
-    where 1
+    where 1    
     <if test="searchname != ''">
        <choose>
           <when test="searchname == 'title'">
              and title Like 
           </when>
           <when test="searchname == 'writer'">
-             and writer Like 
+             and writer Like
           </when>
           <otherwise>
              and content Like
           </otherwise>
        </choose>
        CONCAT('%', #{searchvalue}, '%')
-    </if>
+    </if>      
     ORDER BY refid DESC, 
     renum ASC 
     LIMIT #{currentPage}, #{listCount}  
   </select>  
 
   <select id="selectDetail" resultType="spBoardDto" parameterType="int">
-     SELECT 
-       *
-     FROM
-       jboard
-     WHERE
-       id= #{selectId}
+     SELECT * FROM jboard WHERE id= #{selectId}
   </select>
-  
-  <update id ="increaseHit" parameterType="int">
-     UPDATE jboard 
-     SET hit = hit + 1
-	 WHERE id = #{selectId}
+ 
+  <update id="increaseHit" parameterType="int">
+     UPDATE jboard SET hit = hit + 1 WHERE id=#{selectId}
   </update>
+
+  <select id="validatePass" resultType="int" parameterType="hashMap">
+     SELECT count(*) FROM jboard WHERE id=#{id} and pass=#{pass}
+  </select>
+
 
 </mapper>

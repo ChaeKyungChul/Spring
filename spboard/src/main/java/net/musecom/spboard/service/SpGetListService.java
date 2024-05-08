@@ -14,30 +14,30 @@ import net.musecom.spboard.util.Paging;
 @Service
 public class SpGetListService implements SpService {
 
-   @Autowired
-   Paging pg;
-   @Autowired
-   SpBoardDao dao;
-   
-   @Override
-   public void excute(Model model) {
-      Map<String, Object> map = model.asMap();
-      int currentPage = (int) map.get("cpg");
-      int postsPerPage = 10; 
-      int pagesPerBlock = 5;
-      int totalPosts = dao.selectTotalCount();
-      pg.setCurrentPage(currentPage);
-      pg.setPagesPerBlock(pagesPerBlock);
-      pg.setPostsPerPage(postsPerPage);
-      pg.setTotalPosts(totalPosts);
-      int limitCount = (currentPage -1) * postsPerPage;
-      
-      map.put("currentPage", limitCount);
-      map.put("listCount", postsPerPage);
-      
-      List<SpBoardDto> list = dao.selectList(map);
-      model.addAttribute("pg", pg);
-      model.addAttribute("list", list);
-   }
+	@Autowired
+	Paging pg;
+	@Autowired
+	SpBoardDao dao;
+	
+	@Override
+	public void excute(Model model) {
+		Map<String, Object> map = model.asMap();
+		int currentPage = (int) map.get("cpg");
+		int postsPerPage = 10; 
+		int pagesPerBlock = 5; 
+		int totalPosts = dao.selectTotalCount();
+		pg.setCurrentPage(currentPage);
+		pg.setPagesPerBlock(pagesPerBlock);
+		pg.setPostsPerPage(postsPerPage);
+		pg.setTotalPosts(totalPosts);
+		int limitCount = (currentPage - 1) * postsPerPage;
+		
+        map.put("currentPage", limitCount);
+        map.put("listCount", postsPerPage);    
+		
+		List<SpBoardDto> list = dao.selectList(map);
+		model.addAttribute("pg", pg);
+		model.addAttribute("list", list);
+	}
 
-}
+}                       

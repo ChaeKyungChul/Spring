@@ -5,5 +5,6 @@
 <configuration>
   <typeAliases>
      <typeAlias alias="spBoardDto" type="net.musecom.spboard.dto.SpBoardDto"/>
+     <typeAlias alias="uploadDto" type="net.musecom.spboard.dto.UploadFileDto"/>
   </typeAliases> 
 </configuration>

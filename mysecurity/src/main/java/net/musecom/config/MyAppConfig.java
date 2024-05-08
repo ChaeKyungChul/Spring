@@ -35,7 +35,7 @@ public class MyAppConfig {
 		
 		driverManagerDataSource.setUrl("jdbc:mysql://localhost:3306/mydb?useUnicode=true&characterEncoding=utf-8");
 		driverManagerDataSource.setUsername("root");
-		driverManagerDataSource.setPassword("good6617");
+		driverManagerDataSource.setPassword("dufrhdgkwk10@");
 		driverManagerDataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
 		
 		return driverManagerDataSource;

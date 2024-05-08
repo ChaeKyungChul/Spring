@@ -20,4 +20,7 @@
     <fullyQualifiedTypeName name="org.apache.tomcat.jdbc.pool.DataSource"/>
     <fullyQualifiedTypeName name="org.springframework.security.crypto.password.NoOpPasswordEncoder"/>
     <fullyQualifiedTypeName name="java.sql.Timestamp"/>
+    <fullyQualifiedTypeName name="java.util.Timer"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="Member.DatabaseHelper"/>
 </qualifiedTypeNameHistroy>

@@ -3,7 +3,7 @@
     <typeInfo handle="=tempWork/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;net.musecom.tempwork.dao{StudentDao.java[StudentDao" modifiers="513" timestamp="1712894186820"/>
     <typeInfo handle="=spboard/C:\/Program Files\/Java11\/lib\/jrt-fs.jar`java.base=/maven.pomderived=/true=/=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/11\/docs\/api\/=/&lt;java.util(Spliterator.class[Spliterator" modifiers="1537" timestamp="1680861764000"/>
     <typeInfo handle="=spboard/C:\/Program Files\/Java11\/lib\/jrt-fs.jar`java.desktop=/maven.pomderived=/true=/=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/11\/docs\/api\/=/&lt;javax.swing(SpinnerModel.class[SpinnerModel" modifiers="1537" timestamp="1680861764000"/>
-    <typeInfo handle="=spboard/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;net.musecom.spboard.dao{SpBoardMapper.java[SpBoardMapper" modifiers="513" timestamp="1713517253504"/>
-    <typeInfo handle="=spboard/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;net.musecom.spboard.service{SpService.java[SpService" modifiers="513" timestamp="1713240534401"/>
-    <typeInfo handle="=mysecurity/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;net.musecom.dao{UserDao.java[UserDao" modifiers="513" timestamp="1714377311810"/>
+    <typeInfo handle="=spboard/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;net.musecom.spboard.dao{SpBoardMapper.java[SpBoardMapper" modifiers="513" timestamp="1715149716000"/>
+    <typeInfo handle="=spboard/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;net.musecom.spboard.service{SpService.java[SpService" modifiers="513" timestamp="1713238374000"/>
+    <typeInfo handle="=mysecurity/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;net.musecom.dao{UserDao.java[UserDao" modifiers="513" timestamp="1714377308000"/>
 </typeInfoHistroy>

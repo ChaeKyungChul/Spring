@@ -30,7 +30,7 @@ public class SpBoardDao implements SpBoardMapper {
 	@Override
 	public int delete(int selectId) {
 		// TODO Auto-generated method stub
-		return 0;
+		return session.delete("delete", selectId);
 	}
 
 	@Override

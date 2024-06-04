@@ -26,10 +26,12 @@
 		    Double score = dto.getScore();
 		   
 		    System.out.println(name + "|" + subject + "|" + score);
-		    		    
+		    
+		    String username = (String) sess.getAttribute("name");
+		        
 %>
  
-     <p class="text-right"><%=dto.getName() %>님<a href="#"> 로그아웃</a></p>
+   
 
 
 <!DOCTYPE html>
@@ -46,7 +48,7 @@
 </head>
 <body>
   
-            <p class="text-right"><%=dto.getName() %>님<a href="#"> 로그아웃</a></p>
+            <p class="text-right"><%=username %>님<a href="#"> 로그아웃</a></p>
 
  
     <h1>학점 관리</h1>

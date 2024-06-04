@@ -18,7 +18,7 @@
                 <li>
                     <h5>Java Servlet</h5>
                     <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 99%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                        <div class="progress-bar" role="progressbar" style="width: 99%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">39%</div>
                     </div>
                 </li>
                 <li>

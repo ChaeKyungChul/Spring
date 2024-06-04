@@ -20,7 +20,7 @@
 String username = (String) sess.getAttribute("name");
 %>
     <div class="container mt-3">
-        <h3 class="text-center"><%=username %><%=username %>님 환영합니다.</h3>
+        <h3 class="text-center"><%=username %>님 환영합니다.</h3>
             <div class="box">
                 <a href="classes.jsp">수강신청</a>
                 <a href="list.jsp">시간표</a> 

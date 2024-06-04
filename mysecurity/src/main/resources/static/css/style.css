@@ -324,9 +324,11 @@ a.fashion:before{
     border:10px solid #fff;
     outline:1px solid #ddd;
     box-shadow: 0 0 40px 0 rgba(0,0,0,0.3);
+    
 }
 .zoombox img{
-    max-width:100%;
+	height : 200%;
+    max-width:200%;
 }
 .close{
     position:absolute;

@@ -41,7 +41,7 @@
                        <div class="post-card">
                         <div class="post-card-img">
                             <div class="post-card-img-in">
-                                <a href="gallery-post.html?id=1"><i class="ri-links-fill"></i></a>
+                                <a href="https://github.com/ChaeKyungChul/LHpage-practice"><i class="ri-links-fill"></i></a>
                                 <a href="res/images/LHPAGE 1.png" class="imgzoom"><i class="ri-zoom-in-line"></i></a>
                                    <a href="res/images/LHpage 카피.png" class="imgzoom"><i class="ri-zoom-in-line"></i></a>
                             </div>
@@ -63,7 +63,7 @@
                     <div class="post-card">
                         <div class="post-card-img">
                             <div class="post-card-img-in">
-                                <a href="gallery-post.html?id=1"><i class="ri-links-fill"></i></a>
+                                <a href="https://github.com/ChaeKyungChul/Clocksample"><i class="ri-links-fill"></i></a>
                                 <a href="res/images/13일차에 시계도만들어보고.png" class="imgzoom"><i class="ri-zoom-in-line"></i></a>
                             </div>
                             <img src="res/images/13일차에 시계도만들어보고.png" alt="시계" class="img-fluid">
@@ -82,7 +82,7 @@
                     <div class="post-card">
                         <div class="post-card-img">
                          <div class="post-card-img-in">
-                                <a href="gallery-post.html?id=1"><i class="ri-links-fill"></i></a>
+                                <a href="https://github.com/ChaeKyungChul/2024-02_Html-CSS-JS"><i class="ri-links-fill"></i></a>
                                 <a href="res/images/10일차에 가위바위보 게임도만들어보고.png" class="imgzoom"><i class="ri-zoom-in-line"></i></a>
                             </div>
                             <img src="res/images/10일차에 가위바위보 게임도만들어보고.png" alt="가바위보게임" class="img-fluid">
@@ -105,7 +105,7 @@
                        <div class="post-card">
                         <div class="post-card-img">
                         <div class="post-card-img-in">
-                                <a href="gallery-post.html?id=1"><i class="ri-links-fill"></i></a>
+                                <a href="https://github.com/ChaeKyungChul/shop-Project"><i class="ri-links-fill"></i></a>
                                 <a href="res/images/쇼핑몰2.png" class="imgzoom"><i class="ri-zoom-in-line"></i></a>
                                 <a href="res/images/쇼핑몰1.png" class="imgzoom"><i class="ri-zoom-in-line"></i></a>
                                 <a href="res/images/쇼핑몰3.png" class="imgzoom"><i class="ri-zoom-in-line"></i></a>
@@ -121,55 +121,90 @@
                             <h3>쇼핑몰 페이지</h3>
                             <div class="body-text">
                              <p>HTML, CSS, SCRIPT  으로 기본베이스로 만들고 </p>
-                             <p> 제품의 이미지, 제품의 상세설명등이 코드적으로 너무길어져 JSON을 이용해 만들었습니다 </p>
+                             <p> 제품의 이미지, 제품의 상세설명등이 코드의 가독성을 위해서 JSON을 이용해 만들었습니다 </p>
                             </div>
                         </div>
                     </div>
 
                     <div class="post-card">
                      <div class="post-card-img">
-                         <img src="res/images/sport04.jpg" alt="sport01" class="img-fluid">
+                     <div class="post-card-img-in">
+                                <a href="https://github.com/ChaeKyungChul/weddingPage-practice"><i class="ri-links-fill"></i></a>
+                                <a href="res/images/웨딩 페이지1 .png" class="imgzoom"><i class="ri-zoom-in-line"></i></a>
+                                <a href="res/images/웨딩 페이지2 .png" class="imgzoom"><i class="ri-zoom-in-line"></i></a>
+                               
+                            </div>
+                         <img src="res/images/웨딩 페이지1 .png" alt="웨딩1" class="img-fluid">
+                          <img src="res/images/웨딩 페이지2 .png" alt="웨딩2" class="img-fluid">
                      </div>
                      <div class="post-card-body">
                          <p class="post-card-title">
-                             TRAVEL
+                           웨딩
                          </p>
-                         <h3>이번 프랑스 여행중에 찍은 엄청난 사진1</h3>
+                         <h3> 웨딩 홈페이지</h3>
                          <div class="body-text">
-                          <p>모든 국민은 학문과 예술의 자유를 가진다. 공개하지 아니한 회의내용의 공표에 관하여는 법률이 정하는 바에 의한다. 국회의원의 선거구와 비례대표제 기타 선거에 관한 사항은 법률로 정한다.</p>
-                          <p>국회의 회의는 공개한다. 다만, 출석의원 과반수의 찬성이 있거나 의장이 국가의 안전보장을 위하여 필요하다고 인정할 때에는 공개하지 아니할 수 있다.</p>
+                    		<p> 주변에서 흔하게볼수있는 결혼식 웨딩페이지를만들었습니다. </p>
+                    		
                          </div>
                      </div>
                  </div>
 
                  <div class="post-card">
                      <div class="post-card-img">
-                         <img src="res/images/dance01.jpg" alt="sport01" class="img-fluid">
+                      <div class="post-card-img-in">
+                               <!--  //<a href="gallery-post.html?id=1"><i class="ri-links-fill"></i></a>  -->
+                               <a href="https://github.com/ChaeKyungChul/JAVA-JAVAEE-JSP"><i class="ri-links-fill"></i></a>
+                                 <a href="res/images/웨딩 페이지1 .png" class="imgzoom"><i class="ri-zoom-in-line"></i></a>           
+                            </div>
+                         <img src="res/images/수강신청 2.png" alt="수강신청" class="img-fluid">
                      </div>
                      <div class="post-card-body">
                          <p class="post-card-title">
-                             TRAVEL
+                             수강신청페이지
                          </p>
-                         <h3>이번 프랑스 여행중에 찍은 엄청난 사진1</h3>
+                         <h3>DB를활용한 수강신청페이지</h3>
                          <div class="body-text">
-                          <p>모든 국민은 학문과 예술의 자유를 가진다. 공개하지 아니한 회의내용의 공표에 관하여는 법률이 정하는 바에 의한다. 국회의원의 선거구와 비례대표제 기타 선거에 관한 사항은 법률로 정한다.</p>
-                          <p>국회의 회의는 공개한다. 다만, 출석의원 과반수의 찬성이 있거나 의장이 국가의 안전보장을 위하여 필요하다고 인정할 때에는 공개하지 아니할 수 있다.</p>
+                          <p>  수강신청 페이지를 만든 것 입니다.</p>
                          </div>
                      </div>
                  </div>
 
-                 <div class="post-card">
+                  <div class="post-card">
                      <div class="post-card-img">
-                         <img src="res/images/work02.jpg" alt="sport01" class="img-fluid">
+                      <div class="post-card-img-in">
+                                <a href="https://github.com/ChaeKyungChul/React"><i class="ri-links-fill"></i></a>    
+                                 <a href="res/images/리엑트포토폴리오.png" class="imgzoom"><i class="ri-zoom-in-line"></i></a>        
+                            </div>
+                         <img src="res/images/리엑트포토폴리오.png" alt="리엑트포토폴리오" class="img-fluid">
                      </div>
                      <div class="post-card-body">
                          <p class="post-card-title">
-                             TRAVEL
+                            리엑트
                          </p>
-                         <h3>이번 프랑스 여행중에 찍은 엄청난 사진1</h3>
+                         <h3>리엑트를 활용한 포트폴리오</h3>
                          <div class="body-text">
-                          <p>모든 국민은 학문과 예술의 자유를 가진다. 공개하지 아니한 회의내용의 공표에 관하여는 법률이 정하는 바에 의한다. 국회의원의 선거구와 비례대표제 기타 선거에 관한 사항은 법률로 정한다.</p>
-                          <p>국회의 회의는 공개한다. 다만, 출석의원 과반수의 찬성이 있거나 의장이 국가의 안전보장을 위하여 필요하다고 인정할 때에는 공개하지 아니할 수 있다.</p>
+                			<p> 리엑트를 활용해서 포트폴리오 페이지를 하나더 만들었습니다</p>
+                			
+                         </div>
+                     </div>
+                 </div>
+                  <div class="post-card">
+                     <div class="post-card-img">
+                      <div class="post-card-img-in">  
+                                <a href="https://github.com/ChaeKyungChul/React"><i class="ri-links-fill"></i></a>  
+                                 <a href="res/images/리엑트 네이티브1.png" class="imgzoom"><i class="ri-zoom-in-line"></i></a>  
+                                  <a href="res/images/리엑트 네이티브2 글쓰기.png" class="imgzoom"><i class="ri-zoom-in-line"></i></a>        
+                            </div>
+                         <img src="res/images/리엑트 네이티브1.png" alt="메모장" class="img-fluid">
+                            <img src="res/images/리엑트 네이티브2 글쓰기.png" alt="리엑트 네이티브2 글쓰기.png" class="img-fluid">
+                     </div>
+                     <div class="post-card-body">
+                         <p class="post-card-title">
+                             리엑트 메모장앱
+                         </p>
+                         <h3> 리엑트를활용 메모장앱</h3>
+                         <div class="body-text">
+                          <p> 비쥬얼스튜디오 + 안드로이드스튜디오를 이용해서 메모장 앱을만들었습니다.</p>
                          </div>
                      </div>
                  </div>

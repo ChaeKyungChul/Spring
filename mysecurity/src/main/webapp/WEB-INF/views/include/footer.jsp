@@ -4,16 +4,16 @@
         <aside>
             <h4 class="fw-bold">List posts</h4>
             <div class="recent-post">
-                <a href="#" class="thumb">
+                <a href="https://github.com/ChaeKyungChul/LHpage-practice" class="thumb">
                    <div class="recent-post-box"><i class="ri-links-fill"></i></div>
                    <img src="res/images/LHpage 카피.png" alt="lh"/>
                 </a>
-                <a href="#" class="post-text travel">
+                <a href="https://github.com/ChaeKyungChul/LHpage-practice" class="post-text travel">
                     <h6 class="fw-bold">LHpage 카피</h6>
                 </a>
             </div>
             <div class="recent-post">
-                <a href="#" class="thumb">
+                <a href="https://github.com/ChaeKyungChul?tab=repositories" class="thumb">
                    <div class="recent-post-box"><i class="ri-links-fill"></i></div>
                    <img src="res/images/몰2.png" alt="몰"/>
                 </a>
@@ -22,20 +22,20 @@
                 </a>
             </div>
             <div class="recent-post">
-                <a href="#" class="thumb">
+                <a href="https://github.com/ChaeKyungChul/JAVA-JAVAEE-JSP" class="thumb">
                    <div class="recent-post-box"><i class="ri-links-fill"></i></div>
                    <img src="res/images/jsp게시판 이미지1.png" alt="jsp게시판"/>
                 </a>
-                <a href="#" class="post-text sports">
+                <a href="https://github.com/ChaeKyungChul/JAVA-JAVAEE-JSP" class="post-text sports">
                     <h6 class="fw-bold">jsp 을 이용한 게시판</h6>
                 </a>
             </div>
             <div class="recent-post">
-                <a href="#" class="thumb">
+                <a href="https://github.com/ChaeKyungChul/shop-Project" class="thumb">
                    <div class="recent-post-box"><i class="ri-links-fill"></i></div>
                    <img src="res/images/쇼핑몰3.png" alt="쇼핑몰"/>
                 </a>
-                <a href="#" class="post-text photography">
+                <a href="https://github.com/ChaeKyungChul/shop-Project" class="post-text photography">
                     <h6 class="fw-bold">쇼핑몰 카트박스페이지</h6>
                 </a>
             </div>

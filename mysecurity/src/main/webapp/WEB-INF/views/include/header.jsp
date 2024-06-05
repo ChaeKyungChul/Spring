@@ -25,6 +25,9 @@
         <div class="logo">
             <a href="#"><img src="res/images/logo.png" alt="logo"></a>
         </div>
+        <div class="post-card-img1">                                                                   
+                          <img src="res/images/사진1.png" alt="사진" class="img-fluid">
+                        </div>
         <div class="signin text-center">
         <sec:authorize access="!isAuthenticated()"> 
            <h3 class="mb-3">LOGIN</h3>          
@@ -87,16 +90,16 @@
             <ul class="main-nav mt-5">
                 <li><a href="about">about me</a></li>
                 <li><a href="./">my gallery</a></li>
-                  <li><a href="https://github.com/in1913/ezenCinema" target="_blank">my project</a></li>
+                  <li><a href="https://github.com/ChaeKyungChul?tab=repositories" target="_blank">my project</a></li>
                   <li><a href="youtube">youtube link</a></li>
                   <li><a href="contact">contact me</a></li>    
                </ul>
         </nav>
         <div class="social">
            <a href="#" class="instagram"><i class="ri-instagram-line"></i></a>
-           <a href="#" class="youtube"><i class="ri-youtube-line"></i></a>
-           <a href="#" class="facebook"><i class="ri-facebook-circle-line"></i></a>
-           <a href="#" class="kakaotalk"><i class="ri-kakao-talk-line"></i></a>
+           <a href="https://www.youtube.com/channel/UCKx3HtwsELqy2wIwD2N5Xjg" class="youtube"><i class="ri-youtube-line"></i></a>
+           <a href="https://www.facebook.com/profile.php?id=100004782243586" class="facebook"><i class="ri-facebook-circle-line"></i></a>
+           <a href="https://open.kakao.com/o/sRcsXyvg" class="kakaotalk"><i class="ri-kakao-talk-line"></i></a>
         </div>
         <div class="copyright">
             Copyright &copy; wein's.
